@@ -1,25 +1,39 @@
 <head>
-  <title>simple</title>
+  <title>Meteor Chat</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div class="container">
+  <header>
+  <h1>Basic Chat Application</h1>
+  {{> loginButtons}}
+  </header>
 
-  {{> hello}}
-  {{> info}}
+  <ul>
+  {{#each recentMessages}}
+  <li>
+  <div class="username">{{username}}</div>
+  <div class="message">{{message}}</div>
+  </li>
+  {{/each}}
+  </ul>
+  <footer>
+  {{#if currentUser}}
+
+  <form class="new message">
+  <input type="text" name="text"
+  placeholder="Add a message">
+  </form>
+
+  {{/if}}
+  </footer>
+
+  </div>
+
+
+
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
+<!-- code taken from "An Introduction to Meteor" video:
+https://www.youtube.com/watch?v=dOCMpoeuwTI -->
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
-  </ul>
-</template>
