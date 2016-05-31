@@ -5,7 +5,7 @@
 <!-- hot code push: changes made to the app automatically and instantly appear in the browser, you can view changes live every time you save, push changes up to users live even while they're using the app -->
 
 <body>
-  <div class="container">
+
   <header>
   <h1>Basic Chat Application</h1>
   {{> loginButtons}}
@@ -17,7 +17,7 @@
   <!-- handle bar syntax -->
   <li>
   <div class="username">{{username}}</div>
-  <div class="message">{{message}}</div>
+  <div class="message">{{text}}</div>
   </li>
   {{/each}}
   </ul>
@@ -27,13 +27,13 @@
 
   <form class="new message">
   <input type="text" name="text"
-  placeholder="Add a message">
+  placeholder="Add a message" />
   </form>
 
   {{/if}}
   </footer>
 
-  </div>
+
 
 
 

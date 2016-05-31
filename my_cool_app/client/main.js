@@ -40,7 +40,7 @@ if (Meteor.isServer) {
       }
     });
 
-  Template.body.events({ // event handler
+  Template.body.events({
     "submit .new-message": function (event) {
       var text = event.target.text.value;
 
